@@ -1,0 +1,22 @@
+<form action='https://checkout.dineromail.com/CheckOut' method='post'>
+	
+		<%= hidden_field_tag "merchant", 'lhpaul11@gmail.com' %>
+		<%= hidden_field_tag "language", "es" %>
+		<%= hidden_field_tag "country_id", "3" %>
+		<%= hidden_field_tag "seller_name", "Mision de Vida" %>
+		<%= hidden_field_tag "url_redirect_enabled", "1" %>
+		<%= hidden_field_tag "currency", "clp" %>
+		<%= hidden_field_tag "tool", "button" %>
+		<%= hidden_field_tag "ok_url", donation_succes_url %>
+		<%= hidden_field_tag "error_url", donation_fail_url %>
+
+
+		<%= hidden_field_tag "item_currency_1", "clp" %>
+		<%= hidden_field_tag "item_quantity_1", "1" %>
+		<%= hidden_field_tag "item_ammount_1", "2000" %>
+
+		<input type='hidden' name='header_image' value='http://www.misiondevida.cl/w4/templates/mdv/images/logo_mdv_titulo_mini.png'>
+
+		<input type="submit" id="dineromail_bttn" class="btn large error" style="margin-bottom:10px;" value="Dona!"/>
+
+	</form>

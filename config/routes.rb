@@ -1,4 +1,20 @@
 Mdvaluca::Application.routes.draw do
+
+  devise_for :users
+
+  resources :zones do
+    resources :donations
+  end
+
+  resources :donations
+
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  root :to => 'application#home'
+
+  match 'donation/success' => 'donations#success', :as => :donation_succes
+  match 'donation/fail' => 'donations#fail', :as => :donation_fail
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

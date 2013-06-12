@@ -1,0 +1,25 @@
+
+	 <form action='https://checkout.dineromail.com/CheckOut' method='post'>
+    <!-- Vendedor -->
+    <input type='hidden' name='merchant' value='0534709'>
+    <input type='hidden' name='seller_name' value='Mision de Vida'>
+    <input type='hidden' name='country_id' value='3'>
+    <input type='hidden' name='currency' value='clp'>
+    <input type='hidden' name='ok_url' value='<%= donation_succes_url  %>'>
+    <input type='hidden' name='error_url' value='<%= donation_fail_url  %>'>
+    <input type='hidden' name='change_quantity' value='0'>
+    <input type='hidden' name='buyer_message' value='0'>
+    <input type='hidden' name='url_redirect_enabled' value='1'>
+    <!-- Medios de Pago -->
+    <input type='hidden' name='payment_method_available' value='cl_visa;cl_master;cl_magna;cl_diners;cl_amex'>
+    <!-- Producto -->
+    <input type='hidden' name='item_name_1' value='Donacion'>
+    <input type='hidden' name='item_quantity_1' value='1'>
+    <!-- <input type='hidden' name='item_code_1' value=''> -->
+    <input type='hidden' name='item_ammount_1' value='200000'>
+    <input type='hidden' name='item_currency_1' value='clp'>
+    <!-- Envio -->
+    <!-- Diseño -->
+    <input type='hidden' name='header_image' value='http://www.misiondevida.cl/w4/templates/mdv/images/logo_mdv_titulo_mini.png'>
+    <input type="submit" class="btn large error" style="margin-bottom:10px;" value="Donar"/>
+    </form>
